@@ -1,6 +1,11 @@
 # React Text Tokenizer
 the goal of this component is to take a string and an array of "tokenizers" and it will parse the string to create an array of React Nodes instead. This is useful to, for example, replace video links or ascii emojis to their respective visual/interactive representations...
 
+## Instal
+```
+npm i react-text-tokenizer
+```
+
 ## Example
 
 ```jsx
