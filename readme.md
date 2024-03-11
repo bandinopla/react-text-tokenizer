@@ -13,7 +13,7 @@ import { TextTokenizer } from "react-text-tokenizer"
 import type { TokenEater } from "react-text-tokenizer"
 
 
-const SmileyToken:TextTokenizer = {
+const SmileyToken:TokenEater = {
     match: /^(\:\))/,
     getReactNode : (m, key) => <span key={key}>[Emoji:{m[1]}]</span>,
 }

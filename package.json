@@ -1,14 +1,9 @@
 {
   "name": "react-text-tokenizer",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "React component to convert a text string into React.ReactNodes",
-  "main": "dist/index",
-  "typings": "dist/index",
   "scripts": {
-    "prepublishOnly": "npm run compile",
-    "compile": "npm run clean && tsc -p .",
-    "watch": "tsc -w -p .",
-    "clean": "rm -rf dist"
+    "build": "vite build && tsc"
   },
   "bugs": {
     "url": "https://github.com/bandinopla/react-text-tokenizer/issues"
@@ -17,18 +12,38 @@
     "type": "git",
     "url": "https://github.com/bandinopla/react-text-tokenizer.git"
   },
-  "author": "Bandinopla",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/react": "^18.0.22",
-    "typescript": "^4.8.4"
+  "author": {
+    "name": "Pablo Bandinopla",
+    "url": "https://github.com/bandinopla"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+  "module": "./dist/react-text-tokenizer.esm.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./dist/react-text-tokenizer.esm.js",
+        "types": "./dist/index.d.ts"
+      }
+    }
   },
   "files": [
-    "dist/index.js",
-    "dist/index.d.ts"
-  ]
+    "./dist/react-text-tokenizer.esm.js",
+    "./dist/*.d.ts"
+  ],
+  "keywords": [
+    "tokenizer",
+    "parser",
+    "text"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/react": "^18.0.22",
+    "typescript": "^4.8.4",
+    "vite": "^5.0.8"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  }
 }

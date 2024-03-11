@@ -3,15 +3,15 @@
       "module": "commonjs",
       "target": "es5",
       "outDir": "./dist",
+      "rootDir": "./src",
       "moduleResolution": "node",
       "declaration": true,
+      "emitDeclarationOnly": true,
       "jsx": "react-jsx",
       "esModuleInterop": true,
       "lib": ["ES2015"]
     },
     "include": [
-      "test/**/*.ts",
-      "src/**/*.ts",
-      "src/**/*.tsx" 
+      "src",
     ]
   }
