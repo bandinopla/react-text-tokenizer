@@ -15,7 +15,7 @@ export default defineConfig({
         entry: path.resolve(__dirname, "src/index.tsx"),
         name: "react-text-tokenizer", 
         fileName:"react-text-tokenizer",
-        formats:["esm"]
+        formats:["esm","cjs"]
       },
     rollupOptions: {
         external: [
